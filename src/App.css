@@ -1,0 +1,32 @@
+.cont {
+    background-image: url(https://us.123rf.com/450wm/02irina/02irina1411/02irina141100029/33305554-vintage-floral-pattern-on-a-blue-background-.jpg?ver=6);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.salam {
+    font-family: "Sacramento", cursive;
+    font-size: 2rem;
+    color: rgb(48,76,171);
+}
+.hero {
+    font-family: "Sacramento", cursive;
+}
+.man-name {
+    font-family: "Sacramento", cursive;
+    color: rgb(48,76,171);
+    font-size: 1.7rem;
+}
+.woman-name {
+    font-size: 1.7rem;
+    color: rgb(48,76,171);
+    font-family: "Sacramento", cursive;
+}
+.icon {
+    font-family: "Sacramento", cursive;
+    font-size: 1.3rem;
+}
+.love {
+    color: rgb(48,76,171);
+}
