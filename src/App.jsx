@@ -6,9 +6,11 @@ import Navbar from './components/Navbar'
 function App() {
 
   return (
-    <div className='cont w-full h-screen'>
-      <Navbar />
-      <Hero />
+    <div className=''>
+      <div className="landing-page w-full h-screen">
+        <Navbar />
+        <Hero />
+      </div>
       <Mempelai />
     </div>
   )

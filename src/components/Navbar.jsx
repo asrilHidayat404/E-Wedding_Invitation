@@ -22,11 +22,11 @@ const Navbar = () => {
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
         </div>
-        <div className={`menu lg:flex-[.7] lg:static absolute lg:h-auto top-0 h-screen w-full lg:inline ${screen ? 'lg:inline' : 'hidden'} transition duration-1000`}>
+        <div className={`menu lg:flex-[.7] lg:static absolute lg:h-auto top-0 h-screen w-full lg:inline ${screen ? 'lg:inline' : 'hidden'} transition duration-1000 lg:bg-inherit bg-black-rgba`}>
           <ul className='flex justify-evenly lg:flex-row flex-col items-center h-full'>
             <li><a href="">Home</a></li>
-            <li><a href="">Mempelai</a></li>
             <li><a href="">Undangan</a></li>
+            <li><a href="">Mempelai</a></li>
             <li><a href="">Galeri</a></li>
             <li><a href="">Ucapan</a></li>
           </ul>
