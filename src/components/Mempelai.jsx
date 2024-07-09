@@ -2,7 +2,7 @@ const Mempelai = () => {
     return (
         <div className="w-full flex flex-col items-center bg-slate-200 pt-20">
             <header className="text-center">
-                <h1 className="mb-6 salam font-semibold">Assalamualaikum Wr. Wb.</h1>
+                <h1 className="mb-6 salam text-primary font-semibold">Assalamualaikum Wr. Wb.</h1>
                 <p>Dengan Rahmat Allah yang maha kuasa</p>
                 <p>Insyaallah kami akan melangsungkan pernikahan</p>
             </header>
@@ -13,7 +13,7 @@ const Mempelai = () => {
             <div className="couple flex gap-3 mt-10 lg:flex-row flex-col relative">
                 <div className="man flex gap-5">
                     <div className="w-[250px] text-right">
-                        <div className="man-name mb-5 font-semibold">Zilong</div>
+                        <div className="man-name text-primary mb-5 font-semibold">Zilong</div>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur sint labore deserunt culpa ea hic ducimus placeat, incidunt iusto vero! Quo exercitationem maiores aspernatur harum repudiandae, expedita deserunt deleniti similique soluta quos eos debitis nisi a at corporis repellat possimus ipsa. Iste voluptatem ab amet cupiditate, corporis nostrum voluptatum voluptatibus!</p>
                     </div>
                     <div>
@@ -22,14 +22,14 @@ const Mempelai = () => {
                 </div>
                 <div className="lg:inline flex justify-center items-center lg:absolute lg:top-16 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2">
                     <div className="bg-slate-200 p-5 rounded-full">
-                        <svg className="w-6 h-auto fill-current love" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <svg className="w-6 h-auto fill-current text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z" />
                         </svg>
                     </div>
                 </div>
                 <div className="woman flex flex-row-reverse gap-5">
                     <div className="w-[250px] text-left">
-                        <div className="woman-name mb-5 font-semibold">Miya</div>
+                        <div className="woman-name text-primary mb-5 font-semibold">Miya</div>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur sint labore deserunt culpa ea hic ducimus placeat, incidunt iusto vero! Quo exercitationem maiores aspernatur harum repudiandae, expedita deserunt deleniti similique soluta quos eos debitis nisi a at corporis repellat possimus ipsa. Iste voluptatem ab amet cupiditate, corporis nostrum voluptatum voluptatibus!</p>
                     </div>
                     <div>

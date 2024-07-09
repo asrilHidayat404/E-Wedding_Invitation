@@ -1,14 +1,26 @@
-import React from "react";
-import Countdown from "./utils/Countdown";
+import './App.css'
+import Hero from './components/Hero'
+import Info from './components/Info'
+import Mempelai from './components/Mempelai'
+import Navbar from './components/Navbar'
 
-const App = () => {
-  let deadline = "January, 10, 2030";
+function App() {
 
   return (
-    <div className="App">
-      <Countdown deadline={deadline} />
+    <div className='bg-slate-200'>
+      <div className="landing-page w-full h-screen">
+        <Navbar />
+        <Hero />
+      </div>
+      <div>
+        <Mempelai />
+      </div>
+      <div className='mt-10'>
+        <Info />
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+
+export default App

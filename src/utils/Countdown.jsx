@@ -1,44 +1,56 @@
 import React, { useEffect, useState } from "react";
 
 const Countdown = ({ deadline }) => {
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
+    const [days, setDays] = useState(0);
+    const [hours, setHours] = useState(0);
+    const [minutes, setMinutes] = useState(0);
+    const [seconds, setSeconds] = useState(0);
 
-  const leading0 = (num) => {
-    return num < 10 ? "0" + num : num;
-  };
+    const leading0 = (num) => {
+        return num < 10 ? "0" + num : num;
+    };
 
-  const getTimeUntil = (deadline) => {
-    const time = Date.parse(deadline) - Date.parse(new Date());
-    if (time < 0) {
-      setDays(0);
-      setHours(0);
-      setMinutes(0);
-      setSeconds(0);
-    } else {
-      setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
-      setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
-      setMinutes(Math.floor((time / 1000 / 60) % 60));
-      setSeconds(Math.floor((time / 1000) % 60));
-    }
-  };
+    const getTimeUntil = (deadline) => {
+        const time = Date.parse(deadline) - Date.parse(new Date());
+        if (time < 0) {
+            setDays(0);
+            setHours(0);
+            setMinutes(0);
+            setSeconds(0);
+        } else {
+            setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
+            setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
+            setMinutes(Math.floor((time / 1000 / 60) % 60));
+            setSeconds(Math.floor((time / 1000) % 60));
+        }
+    };
 
-  useEffect(() => {
-    setInterval(() => getTimeUntil(deadline), 1000);
+    useEffect(() => {
+        setInterval(() => getTimeUntil(deadline), 1000);
 
-    return () => getTimeUntil(deadline);
-  }, [deadline]);
+        return () => getTimeUntil(deadline);
+    }, [deadline]);
 
-  return (
-    <div>
-      <div className="Clock-days">{leading0(days)} Days</div>
-      <div className="Clock-hours">{leading0(hours)} Hours</div>
-      <div className="Clock-minutes">{leading0(minutes)} Minutes</div>
-      <div className="Clock-seconds">{leading0(seconds)} Seconds</div>
-    </div>
-  );
+    return (
+        <div className="mt-5 flex gap-3">
+            <div className="flex-col w-20 h-20 rounded-full bg-slate-200 flex justify-center items-center text-[rgb(48,76,171)]">
+                <p className="Clock-days">{leading0(days)}</p>
+                <p>hari</p>
+            </div>
+            <div className="flex-col w-20 h-20 rounded-full bg-slate-200 flex justify-center items-center text-[rgb(48,76,171)]">
+                <p className="Clock-hours">{leading0(hours)}</p>
+                <p>jam</p>
+            </div>
+            <div className="flex-col w-20 h-20 rounded-full bg-slate-200 flex justify-center items-center text-[rgb(48,76,171)]">
+                <p className="Clock-minutes">{leading0(minutes)}</p>
+                <p>menit</p>
+            </div>
+            <div className="flex-col w-20 h-20 rounded-full bg-slate-200 flex justify-center items-center text-[rgb(48,76,171)]">
+                <p className="Clock-seconds">{leading0(seconds)}</p>
+                <p>detik</p>
+            </div>
+        </div>
+    );
 };
 
 export default Countdown;
