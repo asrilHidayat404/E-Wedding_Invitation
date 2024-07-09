@@ -9,7 +9,7 @@ const Hero = () => {
             </div>
             <div className="time flex flex-col items-center mt-8">
                 <span>Akan segera melangsungkan pernikahan dalam:</span>
-                <Countdown deadline={"Juli, 12, 2024"}/>
+                <Countdown deadline={"Juli, 09, 2024"} specificHour={18} />
             </div>
         </div>
     )

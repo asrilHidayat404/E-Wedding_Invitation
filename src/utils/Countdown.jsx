@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Countdown = ({ deadline }) => {
+const Countdown = ({ deadline, specificHour }) => {
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
@@ -10,8 +10,11 @@ const Countdown = ({ deadline }) => {
         return num < 10 ? "0" + num : num;
     };
 
-    const getTimeUntil = (deadline) => {
-        const time = Date.parse(deadline) - Date.parse(new Date());
+    const getTimeUntil = (deadline, specificHour) => {
+        let deadlineDate = new Date(deadline);
+        deadlineDate.setHours(specificHour, 0, 0, 0); // Set deadline to specific hour
+
+        const time = deadlineDate.getTime() - Date.now();
         if (time < 0) {
             setDays(0);
             setHours(0);
@@ -26,10 +29,14 @@ const Countdown = ({ deadline }) => {
     };
 
     useEffect(() => {
-        setInterval(() => getTimeUntil(deadline), 1000);
+        getTimeUntil(deadline, specificHour);
 
-        return () => getTimeUntil(deadline);
-    }, [deadline]);
+        const interval = setInterval(() => {
+            getTimeUntil(deadline, specificHour);
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, [deadline, specificHour]);
 
     return (
         <div className="mt-5 flex gap-3">
