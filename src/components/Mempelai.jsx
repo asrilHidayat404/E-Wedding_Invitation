@@ -10,11 +10,11 @@ const Mempelai = () => {
                 <p>Minggu, 24 Juli 2024</p>
                 <p>di Aula Masjid - Jalan Semeru - RT 004</p>
             </div>
-            <div className="couple flex gap-3 mt-10 lg:flex-row flex-col relative">
-                <div className="man flex gap-5">
-                    <div className="w-[250px] text-right">
+            <div className="couple flex gap-3 mt-10 lg:flex-row flex-col relative w-full justify-center p-10 lg:p-0">
+                <div className="man flex gap-5 justify-center">
+                    <div className="lg:w-[250px] w-[400px] text-right">
                         <div className="man-name text-primary mb-5 font-semibold">Zilong</div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur sint labore deserunt culpa ea hic ducimus placeat, incidunt iusto vero! Quo exercitationem maiores aspernatur harum repudiandae, expedita deserunt deleniti similique soluta quos eos debitis nisi a at corporis repellat possimus ipsa. Iste voluptatem ab amet cupiditate, corporis nostrum voluptatum voluptatibus!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore harum sequi nesciunt animi temporibus, alias eligendi blanditiis sunt unde!</p>
                     </div>
                     <div>
                         <img src="https://i.pinimg.com/736x/a5/6a/b5/a56ab55c5a54236e444de5d3a5dd3ea6.jpg" alt="" width="140px" className="rounded-full" />
@@ -27,10 +27,10 @@ const Mempelai = () => {
                         </svg>
                     </div>
                 </div>
-                <div className="woman flex flex-row-reverse gap-5">
-                    <div className="w-[250px] text-left">
+                <div className="woman flex flex-row-reverse gap-5 justify-center">
+                    <div className="lg:w-[250px] w-[400px] text-left">
                         <div className="woman-name text-primary mb-5 font-semibold">Miya</div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur sint labore deserunt culpa ea hic ducimus placeat, incidunt iusto vero! Quo exercitationem maiores aspernatur harum repudiandae, expedita deserunt deleniti similique soluta quos eos debitis nisi a at corporis repellat possimus ipsa. Iste voluptatem ab amet cupiditate, corporis nostrum voluptatum voluptatibus!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit corporis dignissimos porro, totam quibusdam magnam modi delectus dicta voluptatem officiis?</p>
                     </div>
                     <div>
                         <img src="https://64.media.tumblr.com/94f222bac9b056c26da8f6f319374cf9/66756dbc28f7560f-dd/s540x810/61e8c7c48b620ab02bf546ceca65980cf1d5768a.jpg" alt="" width="140px" className="rounded-full" />

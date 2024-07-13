@@ -19,7 +19,7 @@ const Navbar = () => {
             viewBox="0 0 17 14"
             onClick={handleMenu}
             >
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
         </div>
         <div className={`menu lg:flex-[.7] lg:static absolute lg:h-auto top-0 h-screen w-full lg:inline ${screen ? 'lg:inline lg:bg-transparent  bg-nav-black-rgba' : 'hidden'}`}>
