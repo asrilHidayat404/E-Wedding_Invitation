@@ -6,7 +6,7 @@ const Navbar = () => {
     }
     console.log(screen)
     return (
-      <nav className='w-full text-slate-200 flex lg:justify-evenly h-16 items-center lg:relative fixed bg-nav-black-rgba z-50'>
+      <nav className='w-full text-slate-200 flex lg:justify-evenly h-16 items-center sticky top-0 bg-nav-black-rgba z-50'>
         <div className='lg:flex-[.3] text-center flex-1 z-10'>
           <span className=" icon">ZilongMiya</span>
         </div>
@@ -24,11 +24,11 @@ const Navbar = () => {
         </div>
         <div className={`menu lg:flex-[.7] lg:static absolute lg:h-auto top-0 h-screen w-full lg:inline ${screen ? 'lg:inline lg:bg-transparent  bg-nav-black-rgba' : 'hidden'}`}>
           <ul className='flex justify-evenly lg:flex-row flex-col items-center h-full'>
-            <li><a href="">Home</a></li>
-            <li><a href="">Undangan</a></li>
-            <li><a href="">Mempelai</a></li>
-            <li><a href="">Galeri</a></li>
-            <li><a href="">Ucapan</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#undangan">Undangan</a></li>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="rsvp">RSVP</a></li>
           </ul>
         </div>
       </nav>

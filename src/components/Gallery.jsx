@@ -25,7 +25,7 @@ const Gallery = () => {
                 key={i}
                 src={`https://picsum.photos/1200/700?random=${i}`}
                 alt=""
-                className="lg:w-1/5 md:w-1/4 w-1/3 rounded-md"
+                className="lg:w-1/5 md:w-1/4 w-1/3 rounded-md cursor-pointer"
                 onClick={(e) => showImage(e)}
             />
         );
