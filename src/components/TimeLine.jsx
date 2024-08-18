@@ -15,7 +15,7 @@ const TimeLine = () => {
                                 <div className="w-1 h-full bg-primary rounded-t-full">
                                 </div>
                             </div>
-                            <div className="absolute lg:w-24 tml lg:h-24 w-16 h-16 lg:-mt-12 -mt-8 -ml-5 lg:-ml-9 bg-white border-4 border-primary rounded-full top-1/2"></div>
+                            <div className="absolute lg:w-32 tml lg:h-32 w-16 h-16 lg:-mt-12 -mt-8 -ml-5 lg:-ml-[50px] bg-white border-4 border-primary rounded-full top-1/2"></div>
                         </div>
                     </div>
 
@@ -24,7 +24,7 @@ const TimeLine = () => {
                             <div className="flex items-center justify-center w-6 h-full">
                                 <div className="w-1 h-full bg-primary"></div>
                             </div>
-                            <div className="absolute lg:w-24 tml lg:h-24 w-16 h-16 lg:-mt-12 -mt-8 -ml-5 lg:-ml-9 bg-white border-4 border-primary rounded-full top-1/2"></div>
+                            <div className="absolute lg:w-32 tml lg:h-32 w-16 h-16 lg:-mt-12 -mt-8 -ml-5 lg:-ml-[50px] bg-white border-4 border-primary rounded-full top-1/2"></div>
                         </div>
                         <div className="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-6 col-end-10 mr-auto">
                             <h3 className=" font-semibold lg:text-xl">Mulai Serius</h3>
@@ -45,7 +45,7 @@ const TimeLine = () => {
                                 <div className="w-1 h-full bg-primary rounded-t-full">
                                 </div>
                             </div>
-                            <div className="absolute lg:w-24 tml lg:h-24 w-16 h-16 lg:-mt-12 -mt-8 -ml-5 lg:-ml-9 bg-white border-4 border-primary rounded-full top-1/2"></div>
+                            <div className="absolute lg:w-32 tml lg:h-32 w-16 h-16 lg:-mt-12 -mt-8 -ml-5 lg:-ml-[50px] bg-white border-4 border-primary rounded-full top-1/2"></div>
                         </div>
                     </div>
 
@@ -54,7 +54,7 @@ const TimeLine = () => {
                             <div className="flex items-center justify-center w-6 h-full">
                                 <div className="w-1 h-full bg-primary"></div>
                             </div>
-                            <div className="absolute lg:w-24 tml lg:h-24 w-16 h-16 lg:-mt-12 -mt-8 -ml-5 lg:-ml-9 bg-white border-4 border-primary rounded-full top-1/2"></div>
+                            <div className="absolute lg:w-32 tml lg:h-32 w-16 h-16 lg:-mt-12 -mt-8 -ml-5 lg:-ml-[50px] bg-white border-4 border-primary rounded-full top-1/2"></div>
                         </div>
                         <div className="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-6 col-end-10 mr-auto">
                             <h3 className=" font-semibold lg:text-xl">New Event 4</h3>

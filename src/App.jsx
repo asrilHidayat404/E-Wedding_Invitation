@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import './App.css'
 import Cerita from './components/Cerita'
 import { Footer } from './components/Footer'
@@ -7,30 +8,42 @@ import Hero from './components/Hero'
 import Info from './components/Info'
 import Mempelai from './components/Mempelai'
 import Navbar from './components/Navbar'
+import CommentsList from './components/CommentList'
 
-function App() {
-
+const App = () => {
+  const point = {
+    hero: useRef(null),
+    undangan: useRef(null),
+    info: useRef(null),
+    galeri: useRef(null),
+    komen: useRef(null)
+  }
   return (
     <div className='bg-slate-200'>
-      <section className="landing-page w-full h-screen" id='home'>
+      <section className="landing-page w-full h-screen" id='hero' ref={point.hero}>
         <Hero />
       </section>
       <div>
-        <Navbar />
+        <Navbar hero={point.hero} undangan={point.undangan} info={point.info} galeri={point.galeri} comment={point.komen} />
         <main>
-          <Mempelai />
-          <div className='mt-10'>
+          <section id='undangan' ref={point.undangan}>
+            <Mempelai />
+          </section>
+          <section id='info' ref={point.info} className='mt-10'>
             <Info />
-          </div>
-          <div className="mt-10">
+          </section>
+          <section className="mt-10">
             <Cerita />
-          </div>
-          <div className='mt-20'>
+          </section>
+          <section id='galeri' ref={point.galeri} className='mt-20'>
             <Gallery />
-          </div>
-          <div className='mt-28'>
+          </section>
+          <section className='mt-28'>
             <Hadiah />
-          </div>
+          </section>
+          <section className='text-slate-200 bg-black-rgba pb-16' id='comment' ref={point.komen}>
+            <CommentsList />
+          </section>
           <Footer />
         </main>
       </div>
@@ -40,3 +53,4 @@ function App() {
 
 
 export default App
+

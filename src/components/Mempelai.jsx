@@ -1,6 +1,9 @@
+import Man from "../assets/man.jpeg"
+import Woman from "../assets/Woman.jpeg"
+
 const Mempelai = () => {
     return (
-        <div className="w-full flex flex-col items-center bg-slate-200 pt-20">
+        <div className="w-full flex flex-col items-center bg-slate-200 pt-20 lg:h-screen">
             <header className="text-center">
                 <h1 className="mb-6 salam text-primary font-semibold">Assalamualaikum Wr. Wb.</h1>
                 <p>Dengan Rahmat Allah yang maha kuasa</p>
@@ -13,11 +16,11 @@ const Mempelai = () => {
             <div className="couple flex gap-3 mt-10 lg:flex-row flex-col relative w-full justify-center p-10 lg:p-0">
                 <div className="man flex gap-5 justify-center">
                     <div className="lg:w-[250px] w-[400px] text-right lg:flex-none flex-1">
-                        <div className="man-name text-primary mb-5 font-semibold">Zilong</div>
+                        <div className="man-name text-primary mb-5 font-semibold">Asril</div>
                         <p className="lg:text-inherit text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore harum sequi nesciunt animi temporibus, alias eligendi blanditiis sunt unde!</p>
                     </div>
                     <div className="lg:flex-none flex-1 flex items-center">
-                        <img src="https://i.pinimg.com/736x/a5/6a/b5/a56ab55c5a54236e444de5d3a5dd3ea6.jpg" alt="" className="rounded-full lg:w-[140px] w-[240px]" />
+                        <img src={Man} alt="" className="rounded-full lg:w-[140px] w-[240px]" />
                     </div>
                 </div>
                 <div className="lg:inline flex justify-center items-center lg:absolute lg:top-16 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2">
@@ -29,11 +32,11 @@ const Mempelai = () => {
                 </div>
                 <div className="woman flex flex-row-reverse gap-5 justify-center">
                     <div className="lg:w-[250px] w-[400px] text-left lg:flex-none flex-1">
-                        <div className="woman-name text-primary mb-5 font-semibold">Miya</div>
+                        <div className="woman-name text-primary mb-5 font-semibold">?????</div>
                         <p className="lg:text-inherit text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente dolore voluptatum natus repellendus eligendi at vel suscipit molestiae error temporibus!.</p>
                     </div>
                     <div className="lg:flex-none flex-1 flex items-center justify-end">
-                        <img src="https://64.media.tumblr.com/94f222bac9b056c26da8f6f319374cf9/66756dbc28f7560f-dd/s540x810/61e8c7c48b620ab02bf546ceca65980cf1d5768a.jpg" alt="" className="rounded-full lg:w-[140px] w-[240px]" />
+                        <img src={Woman} alt="" className="rounded-full lg:w-[140px] w-[240px]" />
                     </div>
                 </div>
             </div>

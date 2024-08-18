@@ -1,5 +1,5 @@
 import React from 'react'
-
+import CommentsList from "./CommentList"
 const Hadiah = () => {
   return (
     <div className='w-full text-slate-200 py-10 bg-black-rgba lg:py-20 p-6'>

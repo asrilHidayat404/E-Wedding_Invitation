@@ -1,14 +1,21 @@
 import { useState } from "react";
-const Navbar = () => {
+const Navbar = (...props) => {
+    const links =  Object.keys(props[0]).map((key) => [key, props[0][key]]);
     const [screen, setScreen] = useState(false);
     const handleMenu = () => {
       setScreen(prev => !prev)
     }
-    console.log(screen)
+
+    const goTo = (sectionRef) => {
+      console.log(sectionRef.current)
+      if (sectionRef.current) {
+        sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      } 
+    }
     return (
       <nav className='w-full text-slate-200 flex lg:justify-evenly h-16 items-center sticky top-0 bg-nav-black-rgba z-50'>
         <div className='lg:flex-[.3] text-center flex-1 z-10'>
-          <span className=" icon">ZilongMiya</span>
+          <span className=" icon">Real?????</span>
         </div>
         <div className="hamburger flex-1 lg:hidden flex justify-end lg:px-0 px-10">
           <svg 
@@ -24,11 +31,16 @@ const Navbar = () => {
         </div>
         <div className={`menu lg:flex-[.7] lg:static absolute lg:h-auto top-0 h-screen w-full lg:inline ${screen ? 'lg:inline lg:bg-transparent  bg-nav-black-rgba' : 'hidden'}`}>
           <ul className='flex justify-evenly lg:flex-row flex-col items-center h-full'>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#undangan">Undangan</a></li>
-            <li><a href="#info">Info</a></li>
-            <li><a href="#galeri">Galeri</a></li>
-            <li><a href="rsvp">RSVP</a></li>
+            {
+              links.map((el, i) => {
+                console.log(el)
+                return (
+                  <li key={i} className="cursor-pointer first-letter:uppercase" onClick={() => goTo(el[1])} >
+                    {el[0] == 'hero' ? 'home' : el[0]}
+                  </li> 
+                )
+              })
+            }
           </ul>
         </div>
       </nav>
