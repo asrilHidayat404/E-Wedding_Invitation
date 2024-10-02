@@ -1,5 +1,5 @@
-import Man from "../assets/man.jpeg"
-import Woman from "../assets/Woman.jpeg"
+// import Man from "../assets/man.jpeg"
+// import Woman from "../assets/Woman.jpeg"
 
 const Mempelai = () => {
     return (
@@ -20,7 +20,7 @@ const Mempelai = () => {
                         <p className="lg:text-inherit text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore harum sequi nesciunt animi temporibus, alias eligendi blanditiis sunt unde!</p>
                     </div>
                     <div className="lg:flex-none flex-1 flex items-center">
-                        <img src={Man} alt="" className="rounded-full lg:w-[140px] w-[240px]" />
+                        <img src='' alt="" className="rounded-full lg:w-[140px] w-[240px]" />
                     </div>
                 </div>
                 <div className="lg:inline flex justify-center items-center lg:absolute lg:top-16 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2">
@@ -36,7 +36,7 @@ const Mempelai = () => {
                         <p className="lg:text-inherit text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente dolore voluptatum natus repellendus eligendi at vel suscipit molestiae error temporibus!.</p>
                     </div>
                     <div className="lg:flex-none flex-1 flex items-center justify-end">
-                        <img src={Woman} alt="" className="rounded-full lg:w-[140px] w-[240px]" />
+                        <img src='' alt="" className="rounded-full lg:w-[140px] w-[240px]" />
                     </div>
                 </div>
             </div>

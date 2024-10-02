@@ -7,7 +7,6 @@ const Navbar = (...props) => {
     }
 
     const goTo = (sectionRef) => {
-      console.log(sectionRef.current)
       if (sectionRef.current) {
         sectionRef.current.scrollIntoView({ behavior: 'smooth' });
       } 
@@ -33,7 +32,6 @@ const Navbar = (...props) => {
           <ul className='flex justify-evenly lg:flex-row flex-col items-center h-full'>
             {
               links.map((el, i) => {
-                console.log(el)
                 return (
                   <li key={i} className="cursor-pointer first-letter:uppercase" onClick={() => goTo(el[1])} >
                     {el[0] == 'hero' ? 'home' : el[0]}

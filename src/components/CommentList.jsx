@@ -1,39 +1,33 @@
 import React, { useEffect, useRef, useState } from "react";
 import Comment from "./Comment";
 import LoginForm from "./LoginForm";
+import { useNavigate } from "react-router-dom";
 
 const CommentsList = () => {
-  const komen = useRef(null)
-  const [user, setUser] = useState()
+  const komen = useRef(null);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState({ username: "", content: "" });
   const login = localStorage.getItem('user') ? true : false
   const [goLogin, setGoLogin] = useState(false)
-
+  const navigate = useNavigate()
   const handleLogin = () => {
     setGoLogin(prev => !prev)
-  }
-  const tamu = () => {
-      fetch(`${import.meta.env.VITE_BACKEND_SERVER}/tamu`)
-    .then(response => response.json())
-    .then(result => {
-      setUser(result[0])
-    })
   }
 
   const komentar = () => {
     fetch(`${import.meta.env.VITE_BACKEND_SERVER}/users-comments`)
       .then(response => response.json())
       .then(result => {
-        setComments(result.komentar)
+        console.log(result)
+        setComments(result.usersComments)
       })
   }
-  useEffect(() => {    
-    tamu()
-    if (user) {
-      localStorage.setItem("user", user.id);
-    }
-  }, [])
+
+  // useEffect(() => {    
+  //   if (user) {
+  //     localStorage.setItem("user", user.id);
+  //   }
+  // }, [])
 
   useEffect(() => {
     komentar()
@@ -51,12 +45,13 @@ const CommentsList = () => {
       headers: {
         'Content-Type': 'application/json', 
       },
-      body: JSON.stringify({user: localStorage.getItem("user"), comment: newComment}),
+      body: JSON.stringify({user: localStorage.getItem("user").split(",")[1], comment: newComment}),
     }
     fetch(`${import.meta.env.VITE_BACKEND_SERVER}/add-user-comment`, options)
         .then(response => response.json())
         .then(data => {
           if (data.success) {
+            // navigate("/")
             location.reload()
             komen.current.scrollIntoView({ behavior: 'smooth' });
           } else {
@@ -66,7 +61,7 @@ const CommentsList = () => {
         })
         .catch(error => console.error('Error fetching data:', error));
   };
-  console.log(user)
+  // console.log(localStorage.getItem("user").split(','))
   return (
     <div className="max-w-[800px] mx-auto p-4 bg-slate-200 rounded-lg shadow-md flex flex-col justify-between" ref={komen}>
       <div className="max-h-[500px] overflow-y-scroll">
@@ -74,8 +69,7 @@ const CommentsList = () => {
         {comments.map((comment, index) => (
           <Comment
             key={index}
-            username={localStorage.getItem("user")}
-            content={comment.komen}
+            comment={comment}
           />
         ))}
       </div>
@@ -85,11 +79,12 @@ const CommentsList = () => {
           <form onSubmit={handleSubmit} className="mt-4">
             <textarea
               required
-              placeholder="Your comment"
+              placeholder={`Comment as ${localStorage.getItem("user") ? localStorage.getItem("user").split(',')[0] : 'Guest'}`}
               onChange={handleContentChange}
               className="w-full mt-2 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 text-black"
               rows="3"
-            ></textarea>
+            >
+            </textarea>
             <button
               type="submit"
               className="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-md focus:outline-none"

@@ -5,7 +5,7 @@ const LoginForm = ({setLogin}) => {
     const [password, setPassword] = useState('');
     const [visible, setVisible] = useState(true);
     const [user, setUser] = useState();
-    const [isTamu, setIsTamu] = useState('')
+    const [isTamu, setIsTamu] = useState([])
 
     const params = new URLSearchParams({
         username: namalengkap,
@@ -13,9 +13,10 @@ const LoginForm = ({setLogin}) => {
     }).toString();
 
     const tamu = () => {
-        fetch(`${import.meta.env.VITE_BACKEND_SERVER}/tamu?${params}`)
+        fetch(`${import.meta.env.VITE_BACKEND_SERVER}/guests?${params}`)
             .then(response => response.json())
             .then(result => {
+                console.log(result)
                 setUser(result)
         })
     }
@@ -28,15 +29,15 @@ const LoginForm = ({setLogin}) => {
 
     useEffect(() => {
         console.log(user)
-        console.log(user?.result[0]?.nama)
-        user?.result[0]?.nama ? setIsTamu(user?.result[0]?.nama) : ''
+        console.log(user?.result[0]?.fullname)
+        user?.result[0]?.id ? setIsTamu([user?.result[0]?.fullname ,user?.result[0]?.id]) : ''
     }, [user])
 
     const handleClose = () => {
         setLogin(prev => !prev)
         setVisible(prev => !prev)
     }
-    isTamu ? localStorage.setItem('user', isTamu) : ''
+    isTamu ? localStorage.setItem('user', [isTamu]) : ''
 
     return (
         <div className={`${visible ? 'flex' : 'hidden'} items-center justify-center p-5 lg:p-0 w-full h-screen fixed top-0 bottom-0 right-0 left-0 bg-login`}>

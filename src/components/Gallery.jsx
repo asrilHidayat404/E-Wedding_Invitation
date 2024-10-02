@@ -13,7 +13,6 @@ const Gallery = () => {
         setImgUrl(data.target.src)
     }
     useEffect(() => {
-        console.log(imgUrl)
         for (let i = 0; i < 20; i++) {
             setI(Math.random())
         }
