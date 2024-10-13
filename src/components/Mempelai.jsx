@@ -14,13 +14,13 @@ const Mempelai = () => {
                 <p>di Aula Masjid - Jalan Semeru - RT 004</p>
             </div>
             <div className="couple flex gap-3 mt-10 lg:flex-row flex-col relative w-full justify-center p-10 lg:p-0">
-                <div className="man flex gap-5 justify-center">
+                <div className="man flex gap-5 justify-center ">
                     <div className="lg:w-[250px] w-[400px] text-right lg:flex-none flex-1">
                         <div className="man-name text-primary mb-5 font-semibold">Asril</div>
                         <p className="lg:text-inherit text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore harum sequi nesciunt animi temporibus, alias eligendi blanditiis sunt unde!</p>
                     </div>
                     <div className="lg:flex-none flex-1 flex items-center">
-                        <img src='' alt="" className="rounded-full lg:w-[140px] w-[240px]" />
+                        <img src={`https://64.media.tumblr.com/2ccceb6b12cda467efce1101c5b2c4f9/7083d6d18689c4b4-bc/s400x600/0d2d401c9e5b359456e77ddb500b8445c8f4d83d.jpg`} alt="" className="rounded-full lg:max-w-[140px] w-[240px]" />
                     </div>
                 </div>
                 <div className="lg:inline flex justify-center items-center lg:absolute lg:top-16 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2">
@@ -36,7 +36,7 @@ const Mempelai = () => {
                         <p className="lg:text-inherit text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente dolore voluptatum natus repellendus eligendi at vel suscipit molestiae error temporibus!.</p>
                     </div>
                     <div className="lg:flex-none flex-1 flex items-center justify-end">
-                        <img src='' alt="" className="rounded-full lg:w-[140px] w-[240px]" />
+                        <img src={`https://nekorandom.files.wordpress.com/2021/07/spiderman-1-mary-jane-watson-high-school-field-trip-kirsten_dunst.jpg`} alt="" className="rounded-full lg:max-w-[140px] w-[240px]" />
                     </div>
                 </div>
             </div>
